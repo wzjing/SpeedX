@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SpeedX">
         <activity android:name=".MainActivity">
+            <meta-data android:name="android.notch_support" android:value="true"/>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
