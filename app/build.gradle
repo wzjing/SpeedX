@@ -8,7 +8,7 @@ plugins {
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.1"
-    ndkVersion "20.0.5594570"
+    ndkVersion '21.2.6472646'
 
     defaultConfig {
         applicationId "com.intech.speedx"
@@ -24,6 +24,15 @@ android {
             }
         }
 
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('debug.keystore')
+            storePassword 'wzjwzjylz'
+            keyAlias 'mykey'
+            keyPassword 'wzjwzjylz'
+        }
     }
 
     buildFeatures {
@@ -43,7 +52,13 @@ android {
     }
 
     buildTypes {
+
+        debug {
+            signingConfig signingConfigs.debug
+        }
+
         release {
+            signingConfig signingConfigs.debug
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
