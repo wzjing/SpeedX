@@ -1,20 +1,19 @@
 package com.intech.speedx
 
-import android.graphics.drawable.ColorDrawable
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Gravity
-import android.view.View
-import android.view.Window
 import android.view.WindowManager
-import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.Composable
-import androidx.core.content.ContextCompat
-import androidx.ui.core.*
+import androidx.ui.core.Alignment
+import androidx.ui.core.Modifier
+import androidx.ui.core.drawShadow
+import androidx.ui.core.setContent
 import androidx.ui.foundation.Text
 import androidx.ui.foundation.drawBackground
 import androidx.ui.graphics.Color
 import androidx.ui.layout.*
+import androidx.ui.material.Button
 import androidx.ui.tooling.preview.Preview
 import androidx.ui.unit.TextUnit
 import androidx.ui.unit.dp
@@ -63,6 +62,11 @@ fun Server(title: String, description: String = "") {
         ) {
             Text(text = title, fontSize = TextUnit.Sp(16))
             Text(text = description, fontSize = TextUnit.Sp(12))
+            Button(onClick = {
+
+            }, contentColor = Color.White, backgroundColor = Color(0xFF009688)) {
+
+            }
         }
     }
 }
